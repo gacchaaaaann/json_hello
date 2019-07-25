@@ -1,0 +1,12 @@
+express を expressを読み込んだオブジェクト
+express() を express();で生成したオブジェクト
+router を express.Router();で生成したオブジェクト
+とする．
+
+express().listenがある.jsをnodeで起動しておくと，起動している間，指定したポートでリクエストを待機してくれる．
+hogeにGETリクエストが来た時は，express().get('hoge', function)で指定したfunctionが起動される．
+ディレクトリを参照したときは，直下のindex.jsが読まれる．
+Hoge = require('hoge'); でhogeを読み込んでオブジェクトHogeを作る．
+app.use('fuga', Hoge); でHogeをfugaを指定したときのAPIとして使うよう指定できる．
+express.Router()で，ルーターを作れる．
+module.exports = router;は，routerをモジュールとして扱うための準備(?)

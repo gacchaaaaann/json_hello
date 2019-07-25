@@ -2,13 +2,9 @@
 var express = require('express');
 var app = express();
 
-//Before:app.get('/',  function(req, res){  res.send('Hello World!'); });
-app.get('/', function(req,res){
-  res.json({
-    message : "Hello,world"
-  });
-}  )
+var router = require('./routers/'); //routerの指定
+app.use('/', router); // /のAPIにrouterを指定
 
-//Before:app.listen(3000, function(){});
+//サーバー起動
 app.listen(3000);
 console.log('listen on port 3000');
