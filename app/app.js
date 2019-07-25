@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 
-var router = require('./routers/'); //routerの指定
+var router = require('./router/'); //routerの指定
 app.use('/', router); // /のAPIにrouterを指定
 
 //サーバー起動
